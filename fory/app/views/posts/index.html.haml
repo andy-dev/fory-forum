@@ -1,5 +1,8 @@
 -@posts.each do |post|
-  %h2= post.title
+  %h2= link_to post.title, post
   %p
-  created at
-  = time_ago_in_words(post.created_at)
+    created
+    = time_ago_in_words(post.created_at)
+    ago
+
+=link_to "new post", new_post_path
