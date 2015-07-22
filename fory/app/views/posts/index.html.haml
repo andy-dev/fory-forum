@@ -3,6 +3,6 @@
   %p
     created
     = time_ago_in_words(post.created_at)
-    ago
+    =post.user.email
 
 =link_to "new post", new_post_path
