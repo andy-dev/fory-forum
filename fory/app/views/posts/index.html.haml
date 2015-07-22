@@ -1,8 +1,11 @@
--@posts.each do |post|
-  %h2= link_to post.title, post
-  %p
-    created
-    = time_ago_in_words(post.created_at)
-    =post.user.email
+#posts
+  -@posts.each do |post|
+    .post
+      %h2.title= link_to post.title, post
+      %p.date
+        created at
+        = time_ago_in_words(post.created_at)
+        by
+        = post.user.email
 
-=link_to "new post", new_post_path
+
